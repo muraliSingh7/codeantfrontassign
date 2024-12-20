@@ -1,0 +1,139 @@
+.repositories {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 40rem) {
+  .repositories {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0;
+  }
+}
+
+.repositories-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e9eaeb;
+  background-color: white;
+  box-shadow: 0 0.0625rem 0.125rem rgba(10, 12.67, 18, 0.05);
+  border-radius: 0.75rem;
+}
+
+.repositories-last-card {
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.repositories-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #d5d7da;
+}
+
+.repositories-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.repository-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.repositories-header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 48rem) {
+  .repositories-header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+.repositories-title-text {
+  color: #181d27;
+  font-size: 1.5rem;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 2rem;
+  margin-block: 0;
+}
+
+.repositories-count {
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  text-align: left;
+  color: #414651;
+  margin-block: 0;
+}
+
+.repositories-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.repositories-button-refresh {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.875rem;
+  color: #414651;
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.25rem;
+  background-color: white;
+  border: 1px solid #d5d7da;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.0625rem 0.125rem rgba(10, 12.67, 18, 0.05);
+}
+
+.repositories-button-add {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 0.875rem;
+  color: white;
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.25rem;
+  background-color: #1570ef;
+  border: 1px solid #1570ef;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.0625rem 0.125rem rgba(10, 12.67, 18, 0.05);
+}
+
+.repositories-search {
+  width: 25%;
+  box-sizing: border-box;
+  border: 1px solid #d5d7da;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: white;
+  background-image: url("../../../../assets/search.png");
+  background-position: 0.625rem 0.625rem;
+  background-repeat: no-repeat;
+  background-size: 1.125rem 1.125rem;
+  padding: 0.625rem 0.875rem;
+  padding-left: 2.5rem;
+  margin-top: 1.125rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .repositories-search {
+    width: 100%;
+  }
+}

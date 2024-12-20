@@ -1,0 +1,10 @@
+.repository-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 640px) {
+  .repository-container {
+    flex-direction: column;
+  }
+}
