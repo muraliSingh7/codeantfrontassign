@@ -5,24 +5,18 @@ import bitbucketIcon from "../../assets/bitbucket.png";
 import azureDevopsIcon from "../../assets/azureDevops.png";
 import gitlabIcon from "../../assets/gitlab.png";
 import Logo from "../../components/Logo";
-import upArrow from "../../assets/upArrow.svg";
-import pieChart from "../../assets/pieChart.svg";
-
-interface AuthProvider {
-  provider: string;
-  iconPath: string;
-}
-
-interface Stat {
-  number: string;
-  description: string;
-}
+import {
+  AuthButton,
+  HostingOptions,
+  StatsCard,
+  StatsSummary,
+} from "./components";
+import { AuthProvider, HostingOption, Stat } from "./interfaces";
 
 const Login: React.FC = () => {
-  const [selectedHoistingOptions, setSelectedHoistingOptions] = useState<
-    "LEFT" | "RIGHT"
-  >("LEFT");
-  
+  const [selectedHostingOption, setSelectedHostingOption] =
+    useState<HostingOption>("SaaS");
+
   const authProviders: AuthProvider[] = [
     { provider: "Github", iconPath: githubIcon },
     { provider: "Bitbucket", iconPath: bitbucketIcon },
@@ -35,45 +29,25 @@ const Login: React.FC = () => {
     { number: "10K+", description: "Developers" },
     { number: "100K+", description: "Hours Saved" },
   ];
-  
+
   return (
-    <div className="app-container">
-      <div className="left-section">
-        <div className="feature1 container">
-          <div className="header">
-            <Logo className="feature1-logo" />
-            <p className="title">AI to Detect & Autofix Bad Code</p>
+    <div className="login-container">
+      <div className="section left">
+        <div className="stat-container">
+          <div className="stat-header">
+            <Logo className="stat-logo" />
+            <p className="stat-title">AI to Detect & Autofix Bad Code</p>
           </div>
-          <div className="stats-container">
-            {statsData.map(({ number, description }) => (
-              <div className="stats-item">
-                <div className="stat-number">{number}</div>
-                <div className="stat-description">{description}</div>
-              </div>
+          <div className="stats-summary-container">
+            {statsData.map((stat) => (
+              <StatsSummary key={stat.description} {...stat} />
             ))}
           </div>
-          <div className="stats2-card">
-            <div className="stats2-card-column">
-              <img
-                src={pieChart}
-                alt="Pie Chart"
-                className="stats2-pie-chart"
-              />
-              <p className="stats2-title">Issues Fixed</p>
-              <p className="stats2-number">500K+</p>
-            </div>
-            <div className="stats2-card-column">
-              <p className="stats2-percentage">
-                <img src={upArrow} alt="Up arrow" className="up-arrow" /> 14%
-              </p>
-              <p className="stats2-week">This week</p>
-            </div>
-          </div>
+          <StatsCard />
         </div>
-
         <Logo className="left-section-logo" />
       </div>
-      <div className="right-section">
+      <div className="section right">
         <div className="auth-container">
           <div className="logo-container">
             <div className="logo-company-name">
@@ -81,39 +55,14 @@ const Login: React.FC = () => {
               CodeAnt AI
             </div>
             <h1 className="welcome-message">Welcome to CodeAnt AI</h1>
-            <div className="hosting-options">
-              <button
-                className={
-                  selectedHoistingOptions === "LEFT"
-                    ? "active"
-                    : "left-inactive"
-                }
-                onClick={() => setSelectedHoistingOptions("LEFT")}
-              >
-                SAAS
-              </button>
-              <button
-                className={
-                  selectedHoistingOptions === "RIGHT"
-                    ? "active"
-                    : "right-inactive"
-                }
-                onClick={() => setSelectedHoistingOptions("RIGHT")}
-              >
-                Self Hosted
-              </button>
-            </div>
+            <HostingOptions
+              selected={selectedHostingOption}
+              onChange={setSelectedHostingOption}
+            />
           </div>
           <div className="auth-buttons-container">
             {authProviders.map((auth) => (
-              <button key={auth.provider} className="auth-button" type="button">
-                <img
-                  src={auth.iconPath}
-                  alt={`${auth.provider} Icon`}
-                  className="auth-icon"
-                />
-                Sign in with {auth.provider}
-              </button>
+              <AuthButton key={auth.provider} provider={auth} />
             ))}
           </div>
         </div>

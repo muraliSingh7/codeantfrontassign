@@ -1,161 +1,68 @@
-.app-container {
+.login-container {
   display: flex;
   min-height: 100vh;
 }
 
-.left-section {
+.section {
   flex: 1;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .left-section {
+.left {
+  background-color: #ffffff;
+}
+
+.right {
+  background-color: #fafafa;
+}
+
+@media screen and (max-width: 64rem) {
+  .left{
     display: none;
   }
 }
 
-.right-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fafafa;
-  padding: 20px;
-}
-
-.feature1.container {
+.stat-container {
   background: white;
-  box-shadow: 0px 0px 24px rgba(8.19, 23.17, 53.12, 0.16);
-  border-radius: 24px;
+  box-shadow: 0 0 1.5rem rgba(8.19, 23.17, 53.12, 0.16);
+  border-radius: 1.5rem;
   position: relative;
 }
 
-.feature1 .header {
-  padding: 24px;
-  display: inline-flex;
+.stat-header {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 8px;
-  border-bottom: 1px solid #e6e8f0;
+  gap: 0.5rem;
+  border-bottom: 0.0625rem solid #e6e8f0;
+  padding: 1.5rem;
 }
 
-.feature1-logo {
-  width: 28px;
-  height: 31px;
+.stat-logo {
+  width: 1.75rem;
+  height: 1.9375rem;
   color: #081735;
 }
 
-.feature1 .title {
+.stat-title {
   color: #081735;
-  font-size: 18px;
-  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-family: Inter;
   font-weight: 700;
-  line-height: 27px;
-  word-wrap: break-word;
+  line-height: 1.6875rem;
   margin-block: 0;
 }
 
-.feature1 .stats-container {
+.stats-summary-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 24px;
-  gap: 20px;
-}
-
-.feature1 .stats-item {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.feature1 .stat-number {
-  color: #081735;
-  font-size: 18px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  line-height: 27px;
-  word-wrap: break-word;
-}
-
-.feature1 .stat-description {
-  color: #171717;
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  line-height: 20px;
-  word-wrap: break-word;
-}
-
-.stats2-card {
-  position: absolute;
-  margin-top: -10px;
-  right: -20px;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  background: white;
-  box-shadow: 0px 0px 24px rgba(8.19, 23.17, 53.12, 0.16);
-  border-radius: 24px;
-  gap: 20px;
-}
-
-.stats2-card-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.stats2-pie-chart {
-  width: 56px;
-  height: 56px;
-}
-
-.stats2-title {
-  color: #171717;
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  line-height: 20px;
-  word-wrap: break-word;
-}
-
-.stats2-number {
-  color: #081735;
-  font-size: 32px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  line-height: 32px;
-  word-wrap: break-word;
-  margin-block: 0;
-}
-
-.stats2-percentage {
-  color: #0049c6;
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  line-height: 20px;
-  word-wrap: break-word;
-  margin-block: 0;
-  display: flex;
-  align-items: center;
-}
-
-.stats2-week {
-  color: #171717;
-  font-size: 12px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  line-height: 16px;
-  word-wrap: break-word;
-  margin-block: 0;
+  padding: 1.5rem;
+  gap: 1.25rem;
 }
 
 .left-section-logo {
@@ -163,7 +70,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  max-width: 300px;
+  max-width: 18.75rem;
 }
 
 .auth-container {
@@ -171,17 +78,17 @@
   border-radius: 0.75rem;
   background-color: #ffffff;
   width: 100%;
-  max-width: 650px;
+  max-width: 40.625rem;
 }
 
 .logo-container {
-  padding: 36px 24px;
-  border-bottom: 1px solid #d5d7da;
+  padding: 2.25rem 1.5rem;
+  border-bottom: 0.0625rem solid #d5d7da;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 40rem) {
   .logo-container {
-    padding: 24px 16px;
+    padding: 1.5rem 1rem;
   }
 }
 
@@ -190,7 +97,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.875rem;
-  font-family: "Satoshi", sans-serif;
+  font-family: Satoshi;
   font-size: 1.875rem;
   font-weight: 300;
   line-height: 2.063rem;
@@ -200,7 +107,7 @@
 
 .welcome-message {
   font-family: Inter;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 3rem;
   text-align: center;
@@ -208,65 +115,29 @@
   margin-bottom: 1.25rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40rem) {
   .welcome-message {
     font-size: 1.5rem;
   }
 }
 
 .right-section-logo {
-  width: 36px;
-  height: 40px;
+  width: 2.25rem;
+  height: 2.5rem;
   color: #181d27;
-}
-
-.hosting-options {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-.hosting-options button {
-  padding: 10px 20px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-
-.hosting-options .left-inactive {
-  border-top-left-radius: 0.375rem;
-  border-bottom-left-radius: 0.375rem;
-  border-right: none;
-  margin-right: -1%;
-}
-
-.hosting-options .right-inactive {
-  border-top-right-radius: 0.375rem;
-  border-bottom-right-radius: 0.375rem;
-  border-left: none;
-  margin-left: -1%;
-}
-
-.hosting-options button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-  border-radius: 0.375rem;
-  z-index: 1;
 }
 
 .auth-buttons-container {
   display: flex;
-  gap: 16px;
   flex-direction: column;
-  padding: 24px;
   align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 40rem) {
   .auth-buttons-container {
-    padding: 24px 16px;
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -283,34 +154,4 @@
   font-weight: 700;
   text-decoration: none;
   color: black;
-}
-
-.auth-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.625rem;
-  padding: 1rem;
-  background: #ffffff;
-  border: 0.0625rem solid #d8dae5;
-  border-radius: 0.3125rem;
-  cursor: pointer;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: #171717;
-  width: 70%;
-}
-
-@media screen and (max-width: 440px) {
-  .auth-button {
-    width: 100%;
-  }
-}
-
-.auth-icon {
-  width: 24px;
-  height: 24px;
 }
