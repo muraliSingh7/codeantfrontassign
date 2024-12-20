@@ -49,6 +49,14 @@ export default tseslint.config({
 })
 ```
 
+## Routes:
+### 1. [/](https://codeantfrontassign.vercel.app/) - Signup Page
+- **Description**: Displays the signup page where users can register.
+
+### 2. [/repository](https://codeantfrontassign.vercel.app/repository) - Repository Page
+- **Description**: Displays the repository page, where users can view repository-related information.
+
+
 ## Screenshots of Implementation:
 
 ### 1. Large Screen:
