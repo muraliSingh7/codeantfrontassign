@@ -48,3 +48,17 @@ export default tseslint.config({
   },
 })
 ```
+
+## Screenshots of Implementation:
+
+### 1. Large Screen:
+![Login](https://github.com/user-attachments/assets/b0db4a4b-42f6-4e27-9876-730ee0035456)
+![Repository](https://github.com/user-attachments/assets/ff133c8e-6930-4a3a-b7a5-977100893e69)
+
+
+### 2. Mobile Screen:
+![Login](https://github.com/user-attachments/assets/9a737162-bfe8-4601-ad38-3cb93307e978)
+![Repository](https://github.com/user-attachments/assets/340edfdf-8884-4342-a0d5-8e299f270215)
+
+
+
